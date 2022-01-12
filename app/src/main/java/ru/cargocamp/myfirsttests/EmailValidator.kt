@@ -10,15 +10,9 @@ class EmailValidator : TextWatcher {
         isValid = isValidEmail(editableText)
     }
 
-    override fun beforeTextChanged(
-        s: CharSequence, start: Int, count: Int, after:
-        Int
-    ) = Unit
+    override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) = Unit
 
-    override fun onTextChanged(
-        s: CharSequence, start: Int, before: Int, count:
-        Int
-    ) = Unit
+    override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) = Unit
 
     companion object {
         /**
@@ -26,12 +20,12 @@ class EmailValidator : TextWatcher {
          */
         private val EMAIL_PATTERN = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-                    "\\@" +
-                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-                    "(" +
-                    "\\." +
-                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-                    ")+"
+                "\\@" +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                ")+"
         )
 
         fun isValidEmail(email: CharSequence?): Boolean {
