@@ -6,4 +6,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MyFirstTests"
-include ':app'
+include(":app")
